@@ -6,6 +6,9 @@ import ExerciseDetail from "./pages/ExerciseDetail";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+import UserPage from "./pages/UserPage";
 
 const App = () => {
 	return (
@@ -13,6 +16,13 @@ const App = () => {
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
+
+				<Route path="/signuplogin" element={<SignUp />} />
+
+				<Route path="/login" element={<Login />} />
+
+				<Route path="/userpage" element={<UserPage />} />
+
 				<Route path="/exercise/:id" element={<ExerciseDetail />} />
 			</Routes>
 			<Footer />

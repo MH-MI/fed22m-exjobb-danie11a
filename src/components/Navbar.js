@@ -42,6 +42,15 @@ const Navbar = () => {
 				>
 					Home
 				</Link>
+				<Link
+					to="/signuplogin"
+					style={{
+						textDecoration: "none",
+						color: "#3A1212",
+					}}
+				>
+					Sign Up
+				</Link>
 				<a
 					href="#exercises"
 					style={{ textDecoration: "none", color: "#3A1212" }}

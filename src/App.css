@@ -106,6 +106,196 @@ body {
     text-decoration: none;
   }
   
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px;
+    width: 600px;
+    background: #fff;
+    padding-top: 30px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .text{
+    color: black;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .underline {
+    width: 61px;
+    height: 6px;
+    background-color: darkslategrey;
+    border-radius: 9px;
+  }
+
+  .inputs {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .input {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+  }
+
+  .input img {
+    margin: 0px 30px;
+  }
+
+  .input input {
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none; 
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+  }
+
+  .forgot-password {
+    padding-left: 62px;
+    margin-top: 27px;
+    color: #797979;
+    font-size: 18px;
+  }
+
+  .forgot-password span {
+    color: grey;
+    cursor: pointer;
+  }
+
+  .submit-container {
+    display: flex;
+    gap: 30px;
+    margin: 60px auto;
+  }
+
+  .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 50px;
+    color: #fff;
+    background: darkslategrey;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .gray {
+    background: #EAEAEA;
+    color: #676767;
+  }
+
+  .tracker {
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 600px;
+  }
+
+  .tracker,
+  .tracker * {
+    font-family: sans-serif;
+  }
+
+  .tracker th {
+    font-size: 1.15em;
+    text-align: left;
+    font-weight: normal;
+    color: #ffffff;
+    background: #797979;
+  }
+
+  .tracker th,
+  .tracker td {
+    padding: 0.75em;
+  }
+
+  .tracker-entries .tracker-row {
+    background: #eeeeee;
+  }
+
+  .tracker-entries .tracker-row:nth-child(odd) {
+    background: #dddddd;
+  }
+
+  .tracker-date,
+  .tracker-workout,
+  .tracker-duration {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 1em;
+    height: 2.5em;
+    padding: 0.5em 0;
+    border: none;
+    outline: none;
+    background: none;
+  }
+
+  .tracker-duration {
+    width: 5em;
+    text-align: right;
+  }
+
+  /* .tracker-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    border-radius:50%;
+    outline: none;
+    color: red;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    cursor: pointer;
+  } */
+
+  .tracker-button:hover {
+    background: rgba( 0,0,0,0.1);
+  }
+
+  .tracker-row--add {
+    border-top: 3px solid #333333;
+    border-bottom: 3px solid #333333;
+    background: #ffffff;
+  }
+
+  .tracker-row--add td {
+    text-align: right;
+  }
+
+  .tracker-add {
+    display: inline-block;
+    padding: 0.8em 1em;
+    color: green;
+    cursor: pointer;
+  }
+
+  .tracker-add:hover {
+    background: rgba(0,0,0,0.1);
+  }
+
   @media screen and (max-width:1200px) {
     .detail-image {
       width: 300px;
