@@ -11,7 +11,8 @@ import password_icon from '../assets/icons/password.png';
 import { Button } from "react-bootstrap";
 
 
-const Login = () => {
+const Login = ({ setAuthenticated  }) => {
+    
     const navigate = useNavigate()
 	const [action, setAction ] = useState("Login");
 	//const  [name, setName] = useState('')
@@ -20,6 +21,13 @@ const Login = () => {
     //const [username, setUsername ] = useState('')
     
     const login = async () => {
+
+        if (!email || !password) {
+            // If email or password is empty, show an alert and return without attempting login
+            alert("Please enter both email and password");
+            return;
+        }
+    
 		{
 			const dbref = collection(db, 'Auth')
             
@@ -36,6 +44,7 @@ const Login = () => {
 				{
 					alert('Login successfully')
                     console.log("funkar det?")
+                    setAuthenticated(true); 
 
                     navigate('/userpage')
 				
@@ -76,7 +85,7 @@ const Login = () => {
     <div className="submit-container">
      
     <Link to="/signuplogin"><Button className="submit" >Sign Up</Button></Link>
-        <Button className="submit" onClick={login()}>Login</Button>
+        <Button className="submit" onClick={login}>Login</Button>
     </div>
 </div>
   )
