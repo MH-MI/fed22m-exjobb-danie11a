@@ -1,43 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Stack } from "@mui/material";
+import { Stack, IconButton, Drawer } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
-import Logo from "../assets/images/Logo.png";
+import Logo from "../assets/images/pngtree-physical-fitness-sport-gym-logo-bodybuilder-with-big-muscles-posing-isolated-png-image_1857715-removebg-preview(1).png";
 
-const Navbar = () => {
+const Navbar = ({ isAuthenticated }) => {
+	const [isDrawerOpen, setDrawerOpen] = useState(false);
+
+	const handleDrawerOpen = () => {
+		setDrawerOpen(true);
+	};
+
+	const handleDrawerClose = () => {
+		setDrawerOpen(false);
+	};
+
 	return (
-		<Stack
-			direction="row"
-			justifyContent="space-around"
-			sx={{
-				gap: {
-					sm: "122px",
-					xs: "40px",
-				},
-				mt: { sm: "32px", xs: "20px" },
-				justifyContent: "none",
-			}}
-			px="20px"
-		>
-			<Link to="/">
-				<img
-					src={Logo}
-					alt="logo"
-					style={{ width: "48px", height: "48px", margin: "0.20px" }}
-				/>
-			</Link>
+		<>
+			{/* Hamburger icon for smaller devices */}
+			<IconButton
+				onClick={handleDrawerOpen}
+				sx={{ display: { sm: "none", xs: "block" } }}
+			>
+				<MenuIcon />
+			</IconButton>
+			<Drawer
+				anchor="right"
+				open={isDrawerOpen}
+				onClose={handleDrawerClose}
+			>
+				<Stack
+					direction="column"
+					gap="24px"
+					p="20px"
+					sx={{ width: "200px" }}
+				>
+					<Link to="/">Home</Link>
+					<Link to="/signuplogin">Sign Up</Link>
+					{isAuthenticated && <Link to="/userpage">UserPage</Link>}
+					<a href="#exercises">Exercises</a>
+				</Stack>
+			</Drawer>
+			{/* Original Stack for larger devices */}
 			<Stack
-				direction="row"
+				direction={{ sm: "row", xs: "column" }}
 				gap="40px"
 				fontSize="24px"
-				alignItems="flex-end"
+				alignItems={{ sm: "flex-end", xs: "flex-start" }}
+				sx={{
+					px: "20px",
+					mt: { sm: "32px", xs: "20px" },
+					display: { sm: "flex", xs: "none" }, // Show on larger devices
+				}}
 			>
 				<Link
 					to="/"
 					style={{
+						fontFamily: "sans-serif",
 						textDecoration: "none",
 						color: "#3A1212",
-						borderBottom: "3px solid black",
 					}}
 				>
 					Home
@@ -45,20 +67,37 @@ const Navbar = () => {
 				<Link
 					to="/signuplogin"
 					style={{
+						fontFamily: "sans-serif",
 						textDecoration: "none",
 						color: "#3A1212",
 					}}
 				>
 					Sign Up
 				</Link>
+				{isAuthenticated && (
+					<Link
+						to="/userpage"
+						style={{
+							fontFamily: "sans-serif",
+							textDecoration: "none",
+							color: "#3A1212",
+						}}
+					>
+						UserPage
+					</Link>
+				)}
 				<a
 					href="#exercises"
-					style={{ textDecoration: "none", color: "#3A1212" }}
+					style={{
+						fontFamily: "sans-serif",
+						textDecoration: "none",
+						color: "#3A1212",
+					}}
 				>
 					Exercises
 				</a>
 			</Stack>
-		</Stack>
+		</>
 	);
 };
 

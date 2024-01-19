@@ -51,7 +51,7 @@ const UserPage = () => {
 
 	return (
 		<div>
-			<h2>UserPage</h2>
+			<h2 className="user-welcome">Welcome!</h2>
 			<br />
 			<br />
 			<div id="app">
