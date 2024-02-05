@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-import { db } from './firebase.js'
+import { db } from './firebase'
 import { useState } from "react";
 import { getDocs, addDoc, collection, where, query} from 'firebase/firestore';
 import user_icon from '../assets/icons/person.png';
