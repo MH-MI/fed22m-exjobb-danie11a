@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Stack, IconButton, Drawer } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-import Logo from "../assets/images/pngtree-physical-fitness-sport-gym-logo-bodybuilder-with-big-muscles-posing-isolated-png-image_1857715-removebg-preview(1).png";
+//import Logo from "../assets/images/pngtree-physical-fitness-sport-gym-logo-bodybuilder-with-big-muscles-posing-isolated-png-image_1857715-removebg-preview(1).png";
 
 const Navbar = ({ isAuthenticated }) => {
 	const [isDrawerOpen, setDrawerOpen] = useState(false);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Stack, Typography, Button } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 
 import HeroBannerImage from "../assets/images/alexander-jawfox-Kl2t5U6Gkm0-unsplash.jpg";
 

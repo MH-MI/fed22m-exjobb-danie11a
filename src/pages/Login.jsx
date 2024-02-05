@@ -14,7 +14,7 @@ import { Button } from "react-bootstrap";
 const Login = ({ setAuthenticated  }) => {
     
     const navigate = useNavigate()
-	const [action, setAction ] = useState("Login");
+	const [action ] = useState("Login");
 	//const  [name, setName] = useState('')
 	const  [email, setEmail] = useState('')
 	const  [password, setPassword] = useState('')
