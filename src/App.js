@@ -10,9 +10,14 @@ import Footer from "./components/Footer";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import UserPage from "./pages/UserPage";
+import { useEffect } from "react";
 
 const App = () => {
 	const [isAuthenticated, setAuthenticated] = useState(false);
+
+	useEffect(() => {
+		document.title = "Giggly Gains";
+	}, []);
 
 	return (
 		<Box width="400px" sx={{ width: { xl: "1488" } }} m="auto">
